@@ -21,6 +21,7 @@ body {
 }
 
 .field {
+  margin-right: 5px;
   padding: 10px;
   border-radius: 3px;
   background: #00bf96;
