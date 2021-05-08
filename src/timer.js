@@ -30,11 +30,18 @@ class CountdownTimer {
                 this.onTick(time)
             }, 1000);
     }
-    stop() {
+    clear() {
         clearInterval(this.intervalId);
         this.isActive = false;
-         const time = this.getTimeComponents(0);
+        const time = this.getTimeComponents(0);
                 this.onTick(time)
+       
+    }
+    stop() {
+       clearInterval(this.intervalId);
+        this.isActive = false;
+         
+
     }
 
     getTimeComponents(time) {
@@ -80,6 +87,12 @@ startBtn.addEventListener('click', () => {
 const stopBtn = document.querySelector('.stopBtn-js');
 stopBtn.addEventListener('click', () => {
     timer.stop()
+});
+
+const clearBtn = document.querySelector('.clearBtn-js');
+clearBtn.addEventListener('click', () => {
+    timer.clear()
+    
 });
 
 
